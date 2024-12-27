@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Button</title>
+</head>
+<body>
+    <button onclick="downloadFile()">下载</button>
+
+    <script>
+        function downloadFile() {
+            const link = document.createElement('a');
+            link.href = '1.iso'; // 替换为实际文件路径
+            link.download = '1.iso';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
